@@ -12,6 +12,11 @@ export default function Navbar() {
 
           <ul className="flex items-center gap-10 text-sm font-semibold tracking-wide text-zinc-900 uppercase">
             <li>
+              <a href="/" className="transition-opacity hover:opacity-70">
+                Home
+              </a>
+            </li>
+            <li>
               <a
                 href="/gallery"
                 className="transition-opacity hover:opacity-70"
@@ -26,10 +31,10 @@ export default function Navbar() {
             </li>
             <li>
               <a
-                href="/#contact"
+                href="/contract"
                 className="transition-opacity hover:opacity-70"
               >
-                Contact
+                Contract
               </a>
             </li>
           </ul>

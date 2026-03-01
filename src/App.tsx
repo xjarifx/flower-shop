@@ -9,6 +9,7 @@ import Slider from "./components/Slider";
 import WhatWeDo from "./components/WhatWeDo";
 import WorkWithUsSection from "./components/WorkWithUsSection";
 import Footer from "./components/Footer";
+import ContractPage from "./components/ContractPage";
 
 function HomePage() {
   return (
@@ -46,6 +47,16 @@ function AboutRoutePage() {
   );
 }
 
+function ContractRoutePage() {
+  return (
+    <>
+      <Navbar />
+      <ContractPage />
+      <Footer />
+    </>
+  );
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -53,6 +64,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/about" element={<AboutRoutePage />} />
+        <Route path="/contract" element={<ContractRoutePage />} />
       </Routes>
     </BrowserRouter>
   );
