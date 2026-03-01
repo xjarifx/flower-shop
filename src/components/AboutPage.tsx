@@ -1,7 +1,7 @@
 const featureImages = [
-  { src: "/assets/a.jpg", alt: "Pink stems" },
-  { src: "/assets/h.jpg", alt: "Red bloom" },
-  { src: "/assets/b.jpg", alt: "White petal" },
+  { src: "/assets/6.jpg", alt: "Pink stems" },
+  { src: "/assets/27.jpg", alt: "Red bloom" },
+  { src: "/assets/8.jpg", alt: "White petal" },
 ];
 
 const introParagraphs = [
@@ -31,7 +31,7 @@ export default function AboutPage() {
             <div className="grid gap-5 md:grid-cols-[minmax(0,17rem)_1fr] md:items-start">
               <div className="overflow-hidden rounded-2xl">
                 <img
-                  src="/assets/a.jpg"
+                  src="/assets/owner.jpg"
                   alt="Founder portrait"
                   className="aspect-square w-full object-cover"
                 />
@@ -69,7 +69,7 @@ export default function AboutPage() {
 
             <div className="mt-8 overflow-hidden rounded-2xl">
               <img
-                src="/assets/e.jpg"
+                src="/assets/20.jpg"
                 alt="Pink tulips"
                 className="aspect-[16/7] w-full object-cover"
               />

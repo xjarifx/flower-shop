@@ -1,23 +1,4 @@
-const services = [
-  {
-    title: "FLORAL INSTALLATIONS",
-    description:
-      "We create clean, contemporary designs that elevate any environment, from intimate gatherings to grand events.",
-    image: "/assets/g.jpg",
-  },
-  {
-    title: "NATIVE PLANT ARRANGEMENTS",
-    description:
-      "Our selection of locally sourced flora brings natural resilience and effortless elegance to your home.",
-    image: "/assets/c.jpg",
-  },
-  {
-    title: "CUSTOM FLORAL CONCEPTS",
-    description:
-      "Your vision, our blooms. We build arrangements that are both personal and exquisitely simple.",
-    image: "/assets/e.jpg",
-  },
-];
+import { services } from "../data/siteData";
 
 export default function GalleryServices() {
   return (
@@ -31,7 +12,7 @@ export default function GalleryServices() {
           <div>
             {services.map((service) => (
               <article
-                key={service.title}
+                key={service.id}
                 className="border-t border-zinc-300 py-8 sm:py-10"
               >
                 <div className="grid gap-6 md:grid-cols-[1fr_0.95fr] md:items-center md:gap-8">
@@ -46,7 +27,7 @@ export default function GalleryServices() {
 
                   <div className="overflow-hidden rounded-3xl">
                     <img
-                      src={service.image}
+                      src={service.image_path}
                       alt={service.title}
                       className="aspect-[4/3] w-full object-cover"
                     />

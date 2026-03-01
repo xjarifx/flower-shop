@@ -1,20 +1,20 @@
 const services = [
   {
     number: "1",
-    image: "/assets/g.jpg",
+    image: "/assets/20.jpg",
     title: "FLORAL INSTALLATIONS",
     description: "Living art for homes, businesses, and events.",
   },
   {
     number: "2",
-    image: "/assets/d.jpg",
+    image: "/assets/22.jpg",
     title: "NATIVE PLANT ARRANGEMENTS",
     description:
       "Whether it's a private retreat or a public space, we craft floral experiences that blend beauty and aspiration.",
   },
   {
     number: "3",
-    image: "/assets/e.jpg",
+    image: "/assets/26.jpg",
     title: "CUSTOM FLORAL CONCEPTS",
     description:
       "Your vision, our blooms. We build arrangements that are both personal and captivating, with floral language and purpose.",

@@ -1,14 +1,5 @@
 import { useRef } from "react";
-
-const flowerImages = [
-  "/assets/a.jpg",
-  "/assets/b.jpg",
-  "/assets/c.jpg",
-  "/assets/d.jpg",
-  "/assets/f.jpg",
-  "/assets/g.jpg",
-  "/assets/h.jpg",
-];
+import { sliderImages } from "../data/siteData";
 
 export default function Slider() {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -48,15 +39,15 @@ export default function Slider() {
           className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           <div className="mx-auto flex w-max min-w-full snap-x snap-mandatory gap-6">
-            {flowerImages.map((image, index) => (
+            {sliderImages.map((image) => (
               <div
-                key={`${image}-${index}`}
+                key={image.id}
                 data-slide="true"
                 className="aspect-square w-[clamp(16rem,30vw,28rem)] shrink-0 snap-start overflow-hidden rounded-[2.2rem]"
               >
                 <img
-                  src={image}
-                  alt="Flower"
+                  src={image.image_path}
+                  alt={image.image_alt}
                   className="h-full w-full object-cover"
                 />
               </div>

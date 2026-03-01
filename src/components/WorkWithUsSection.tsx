@@ -6,7 +6,7 @@ export default function WorkWithUsSection() {
       <div className="mx-auto max-w-[1200px]">
         <div className="overflow-hidden rounded-3xl">
           <img
-            src="/assets/h.jpg"
+            src="/assets/27.jpg"
             alt="Purple flower arrangement"
             className="h-[18rem] w-full object-cover sm:h-[24rem] md:h-[30rem]"
           />

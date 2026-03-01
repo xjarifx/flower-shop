@@ -1,0 +1,131 @@
+{
+  "database": {
+    "name": "flower_shop",
+    "engine": "postgresql",
+    "schemaVersion": "1.0.0",
+    "fetchedAt": "2026-03-01T00:00:00.000Z"
+  },
+  "tables": {
+    "hero_sections": [
+      {
+        "id": 1,
+        "title": "Our Blooms®",
+        "image_path": "/assets/hero.jpg",
+        "image_alt": "Featured flower arrangement"
+      }
+    ],
+    "gallery_items": [
+      {
+        "id": 1,
+        "name": "DAWN BLOOM",
+        "price": "$55/Bunch",
+        "image_path": "/assets/6.jpg"
+      },
+      {
+        "id": 2,
+        "name": "SOLSTICE STEMS",
+        "price": "$30/Bunch",
+        "image_path": "/assets/8.jpg"
+      },
+      {
+        "id": 3,
+        "name": "WHISPER GREENS",
+        "price": "$120/Bunch",
+        "image_path": "/assets/9.jpg"
+      },
+      {
+        "id": 4,
+        "name": "CLARITY PETALS",
+        "price": "$55/Bunch",
+        "image_path": "/assets/11.jpg"
+      },
+      {
+        "id": 5,
+        "name": "RIVER STONE",
+        "price": "$30/Bunch",
+        "image_path": "/assets/12.jpg"
+      },
+      {
+        "id": 6,
+        "name": "MOONLIT MEADOW",
+        "price": "$120/Bunch",
+        "image_path": "/assets/13.jpg"
+      },
+      {
+        "id": 7,
+        "name": "EMBER LEAF",
+        "price": "$55/Bunch",
+        "image_path": "/assets/14.jpg"
+      },
+      {
+        "id": 8,
+        "name": "SKYLINE BLOOM",
+        "price": "$75/Bunch",
+        "image_path": "/assets/15.jpg"
+      },
+      {
+        "id": 9,
+        "name": "STILL WATERS",
+        "price": "$250/Bunch",
+        "image_path": "/assets/17.jpg"
+      }
+    ],
+    "services": [
+      {
+        "id": 1,
+        "title": "FLORAL INSTALLATIONS",
+        "description": "We create clean, contemporary designs that elevate any environment, from intimate gatherings to grand events.",
+        "image_path": "/assets/20.jpg"
+      },
+      {
+        "id": 2,
+        "title": "NATIVE PLANT ARRANGEMENTS",
+        "description": "Our selection of locally sourced flora brings natural resilience and effortless elegance to your home.",
+        "image_path": "/assets/22.jpg"
+      },
+      {
+        "id": 3,
+        "title": "CUSTOM FLORAL CONCEPTS",
+        "description": "Your vision, our blooms. We build arrangements that are both personal and exquisitely simple.",
+        "image_path": "/assets/26.jpg"
+      }
+    ],
+    "slider_images": [
+      {
+        "id": 1,
+        "image_path": "/assets/27.jpg",
+        "image_alt": "Slider flower 1"
+      },
+      {
+        "id": 2,
+        "image_path": "/assets/28.jpg",
+        "image_alt": "Slider flower 2"
+      },
+      {
+        "id": 3,
+        "image_path": "/assets/54.jpg",
+        "image_alt": "Slider flower 3"
+      },
+      {
+        "id": 4,
+        "image_path": "/assets/6.jpg",
+        "image_alt": "Slider flower 4"
+      },
+      {
+        "id": 5,
+        "image_path": "/assets/8.jpg",
+        "image_alt": "Slider flower 5"
+      }
+    ],
+    "footer_sections": [
+      {
+        "id": 1,
+        "brand": "OB.",
+        "location": "Miami, FL",
+        "contact_label": "Contact",
+        "image_path": "/assets/footer.jpg",
+        "image_alt": "Footer flower arrangement"
+      }
+    ]
+  }
+}
