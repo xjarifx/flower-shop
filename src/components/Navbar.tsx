@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { prewarmRoute } from "../utils/prefetchImages";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,6 +56,9 @@ export default function Navbar() {
                 <Link
                   to={link.href}
                   className="transition-opacity hover:opacity-70"
+                  onMouseEnter={() => prewarmRoute(link.href)}
+                  onFocus={() => prewarmRoute(link.href)}
+                  onTouchStart={() => prewarmRoute(link.href)}
                 >
                   {link.label}
                 </Link>
@@ -70,6 +74,9 @@ export default function Navbar() {
                 <Link
                   to={link.href}
                   className="block transition-opacity hover:opacity-70"
+                  onMouseEnter={() => prewarmRoute(link.href)}
+                  onFocus={() => prewarmRoute(link.href)}
+                  onTouchStart={() => prewarmRoute(link.href)}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
