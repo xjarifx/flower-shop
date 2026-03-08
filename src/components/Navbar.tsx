@@ -2,33 +2,27 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { prewarmRoute } from "../utils/prefetchImages";
+import { SITE_CONFIG, NAV_LINKS, ROUTES } from "../constants";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { getCartCount } = useCart();
   const cartCount = getCartCount();
 
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/gallery", label: "Shop" },
-    { href: "/about", label: "About" },
-    { href: "/contract", label: "Delivery & FAQ" },
-  ];
-
   return (
     <header className="sticky top-0 z-50 bg-zinc-100 px-4 pt-5">
       <nav className="w-full">
         <div className="flex items-center justify-between">
           <Link
-            to="/"
+            to={ROUTES.HOME}
             className="font-brand text-4xl leading-none text-zinc-900"
           >
-            Our Blooms
+            {SITE_CONFIG.name}
           </Link>
 
           <div className="flex items-center gap-4">
             <Link
-              to="/cart"
+              to={ROUTES.CART}
               className="relative mr-5 inline-flex items-center justify-center rounded-md p-2 text-zinc-900 transition-opacity hover:opacity-70"
               aria-label="Shopping cart"
             >
@@ -79,7 +73,7 @@ export default function Navbar() {
             </button>
 
             <ul className="hidden items-center gap-10 text-sm font-semibold tracking-wide text-zinc-900 uppercase md:flex">
-              {navLinks.map((link) => (
+              {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
@@ -98,7 +92,7 @@ export default function Navbar() {
 
         {isMenuOpen && (
           <ul className="mt-4 flex flex-col gap-3 text-sm font-semibold tracking-wide text-zinc-900 uppercase md:hidden">
-            {navLinks.map((link) => (
+            {NAV_LINKS.map((link) => (
               <li key={link.href}>
                 <Link
                   to={link.href}

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ROUTES } from "../constants";
 
 export default function OrderSuccessPage() {
   const orderNumber = Math.floor(100000 + Math.random() * 900000);
@@ -70,14 +71,14 @@ export default function OrderSuccessPage() {
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link
-              to="/gallery"
+              to={ROUTES.SHOP}
               className="inline-flex items-center gap-2 rounded-md bg-amber-300 px-6 py-3 text-sm font-extrabold text-zinc-900 uppercase transition-opacity hover:opacity-85"
             >
               <span aria-hidden="true">•</span>
               <span>Shop More Flowers</span>
             </Link>
             <Link
-              to="/"
+              to={ROUTES.HOME}
               className="inline-flex items-center rounded-md border-2 border-zinc-400 px-6 py-3 text-sm font-extrabold text-zinc-900 uppercase transition-opacity hover:opacity-75"
             >
               Back to Home

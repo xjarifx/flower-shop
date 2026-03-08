@@ -1,4 +1,5 @@
 import About from "./About";
+import { ROUTES } from "../constants";
 import OptimizedImage from "./OptimizedImage";
 
 export default function WorkWithUsSection() {
@@ -21,7 +22,7 @@ export default function WorkWithUsSection() {
         eyebrow="SPECIAL OCCASIONS"
         title="Weddings, events, or just because. We deliver fresh flowers for every moment that matters."
         ctaLabel="ABOUT US"
-        ctaHref="/about"
+        ctaHref={ROUTES.ABOUT}
         sectionClassName="bg-zinc-100 px-4 pt-16 pb-0 sm:pt-20"
       />
     </section>

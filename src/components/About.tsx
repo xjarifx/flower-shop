@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ROUTES } from "../constants";
 
 type AboutProps = {
   id?: string;
@@ -14,7 +15,7 @@ export default function About({
   eyebrow = "WHO WE ARE",
   title = "Miami's favorite flower shop. Fresh flowers, delivered with care, every single day.",
   ctaLabel = "SHOP NOW",
-  ctaHref = "/gallery",
+  ctaHref = ROUTES.SHOP,
   sectionClassName = "bg-zinc-100 px-4 py-24 sm:py-28",
 }: AboutProps) {
   return (

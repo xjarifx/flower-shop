@@ -16,6 +16,7 @@ import CheckoutPage from "./components/CheckoutPage";
 import OrderSuccessPage from "./components/OrderSuccessPage";
 import ScrollToTop from "./components/ScrollToTop";
 import { CartProvider } from "./context/CartContext";
+import { ROUTES } from "./constants";
 import { startBackgroundImagePrefetch } from "./utils/prefetchImages";
 
 function HomePage() {
@@ -98,13 +99,13 @@ export default function App() {
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/about" element={<AboutRoutePage />} />
-          <Route path="/contract" element={<ContractRoutePage />} />
-          <Route path="/cart" element={<CartRoutePage />} />
-          <Route path="/checkout" element={<CheckoutRoutePage />} />
-          <Route path="/order-success" element={<OrderSuccessRoutePage />} />
+          <Route path={ROUTES.HOME} element={<HomePage />} />
+          <Route path={ROUTES.SHOP} element={<GalleryPage />} />
+          <Route path={ROUTES.ABOUT} element={<AboutRoutePage />} />
+          <Route path={ROUTES.DELIVERY_FAQ} element={<ContractRoutePage />} />
+          <Route path={ROUTES.CART} element={<CartRoutePage />} />
+          <Route path={ROUTES.CHECKOUT} element={<CheckoutRoutePage />} />
+          <Route path={ROUTES.ORDER_SUCCESS} element={<OrderSuccessRoutePage />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { ROUTES } from "../constants";
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
@@ -14,12 +15,12 @@ export default function CheckoutPage() {
     // Simulate payment processing
     setTimeout(() => {
       clearCart();
-      navigate("/order-success");
+      navigate(ROUTES.ORDER_SUCCESS);
     }, 2000);
   };
 
   if (cart.length === 0) {
-    navigate("/cart");
+    navigate(ROUTES.CART);
     return null;
   }
 

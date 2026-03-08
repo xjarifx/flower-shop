@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ROUTES } from "../constants";
 import OptimizedImage from "./OptimizedImage";
 
 const deliveryInfo = [
@@ -75,7 +76,7 @@ export default function ContractPage() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
-                  to="/gallery"
+                  to={ROUTES.SHOP}
                   className="inline-flex items-center gap-2 rounded-sm bg-amber-300 px-3 py-1.5 text-xs font-extrabold tracking-wide text-zinc-900 uppercase transition-opacity hover:opacity-85"
                 >
                   <span aria-hidden="true">•</span>

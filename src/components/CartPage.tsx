@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { ROUTES } from "../constants";
 import OptimizedImage from "./OptimizedImage";
 
 export default function CartPage() {
@@ -32,7 +33,7 @@ export default function CartPage() {
               delivered soon.
             </p>
             <Link
-              to="/gallery"
+              to={ROUTES.SHOP}
               className="mt-8 inline-flex items-center gap-2 rounded-md bg-amber-300 px-5 py-3 text-sm font-extrabold text-zinc-900 uppercase transition-opacity hover:opacity-85"
             >
               <span aria-hidden="true">•</span>
@@ -153,7 +154,7 @@ export default function CartPage() {
             )}
 
             <Link
-              to="/checkout"
+              to={ROUTES.CHECKOUT}
               className="mt-6 flex w-full items-center justify-center gap-2 rounded-md bg-amber-300 px-5 py-3 text-sm font-extrabold text-zinc-900 uppercase transition-opacity hover:opacity-85"
             >
               <span aria-hidden="true">•</span>
@@ -161,7 +162,7 @@ export default function CartPage() {
             </Link>
 
             <Link
-              to="/gallery"
+              to={ROUTES.SHOP}
               className="mt-3 block text-center text-sm font-semibold text-zinc-700 transition-opacity hover:opacity-70"
             >
               Continue Shopping
