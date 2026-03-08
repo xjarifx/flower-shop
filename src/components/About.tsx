@@ -12,9 +12,9 @@ type AboutProps = {
 export default function About({
   id = "about",
   eyebrow = "WHO WE ARE",
-  title = "We're Our Blooms and we're here to help you find your floral story.",
-  ctaLabel = "ABOUT US",
-  ctaHref = "/about",
+  title = "Miami's favorite flower shop. Fresh flowers, delivered with care, every single day.",
+  ctaLabel = "SHOP NOW",
+  ctaHref = "/gallery",
   sectionClassName = "bg-zinc-100 px-4 py-24 sm:py-28",
 }: AboutProps) {
   return (
@@ -35,14 +35,6 @@ export default function About({
           >
             <span aria-hidden="true">•</span>
             <span>{ctaLabel}</span>
-          </Link>
-          
-          <Link
-            to="/coming-soon"
-            className="inline-flex items-center gap-2 rounded-md border-2 border-amber-300 bg-zinc-100 px-5 py-2.5 text-base font-extrabold text-zinc-900 transition-opacity hover:opacity-85"
-          >
-            <span aria-hidden="true">•</span>
-            <span>CONTACT US</span>
           </Link>
         </div>
       </div>

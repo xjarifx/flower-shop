@@ -3,23 +3,23 @@ import OptimizedImage from "./OptimizedImage";
 const services = [
   {
     number: "1",
-    image: "/assets/17.jpg",
-    title: "FLORAL INSTALLATIONS",
-    description: "Living art for homes, businesses, and events.",
+    image: "/assets/10.webp",
+    title: "SAME-DAY DELIVERY",
+    description: "Need flowers today? We've got you covered. Order by 2 PM for same-day delivery anywhere in Miami. Fresh blooms at your door in hours.",
   },
   {
     number: "2",
-    image: "/assets/22.jpg",
-    title: "NATIVE PLANT ARRANGEMENTS",
+    image: "/assets/16.webp",
+    title: "SUBSCRIPTION BOXES",
     description:
-      "Whether it's a private retreat or a public space, we craft floral experiences that blend beauty and aspiration.",
+      "Fresh flowers, delivered on your schedule. Choose weekly or monthly subscriptions and enjoy handpicked seasonal arrangements without lifting a finger.",
   },
   {
     number: "3",
-    image: "/assets/26.jpg",
-    title: "CUSTOM FLORAL CONCEPTS",
+    image: "/assets/23.webp",
+    title: "CUSTOM BOUQUETS",
     description:
-      "Your vision, our blooms. We build arrangements that are both personal and captivating, with floral language and purpose.",
+      "Make it yours. Pick your flowers, choose your colors, and we'll create a one-of-a-kind bouquet that's exactly what you envisioned.",
   },
 ];
 
@@ -29,10 +29,10 @@ export default function WhatWeDo() {
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <h2 className="text-3xl font-extrabold text-zinc-900 sm:text-4xl">
-            WHAT WE DO
+            HOW IT WORKS
           </h2>
           <p className="mt-2 text-xs text-zinc-700 sm:text-sm">
-            We bring a touch of that simple magic into your world.
+            Fresh flowers made simple. Browse, order, and enjoy.
           </p>
         </div>
 

@@ -11,7 +11,11 @@ import WhatWeDo from "./components/WhatWeDo";
 import WorkWithUsSection from "./components/WorkWithUsSection";
 import Footer from "./components/Footer";
 import ContractPage from "./components/ContractPage";
-import ComingSoon from "./components/ComingSoon";
+import CartPage from "./components/CartPage";
+import CheckoutPage from "./components/CheckoutPage";
+import OrderSuccessPage from "./components/OrderSuccessPage";
+import ScrollToTop from "./components/ScrollToTop";
+import { CartProvider } from "./context/CartContext";
 import { startBackgroundImagePrefetch } from "./utils/prefetchImages";
 
 function HomePage() {
@@ -60,8 +64,28 @@ function ContractRoutePage() {
   );
 }
 
-function ComingSoonPage() {
-  return <ComingSoon />;
+function CartRoutePage() {
+  return (
+    <>
+      <Navbar />
+      <CartPage />
+      <Footer />
+    </>
+  );
+}
+
+function CheckoutRoutePage() {
+  return (
+    <>
+      <Navbar />
+      <CheckoutPage />
+      <Footer />
+    </>
+  );
+}
+
+function OrderSuccessRoutePage() {
+  return <OrderSuccessPage />;
 }
 
 export default function App() {
@@ -70,14 +94,19 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/about" element={<AboutRoutePage />} />
-        <Route path="/contract" element={<ContractRoutePage />} />
-        <Route path="/coming-soon" element={<ComingSoonPage />} />
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/about" element={<AboutRoutePage />} />
+          <Route path="/contract" element={<ContractRoutePage />} />
+          <Route path="/cart" element={<CartRoutePage />} />
+          <Route path="/checkout" element={<CheckoutRoutePage />} />
+          <Route path="/order-success" element={<OrderSuccessRoutePage />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }

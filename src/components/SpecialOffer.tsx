@@ -9,7 +9,7 @@ export default function SpecialOffer() {
         <p className="text-base font-semibold">Off Your</p>
         <p className="text-base font-semibold">First Order</p>
         <p className="mt-1 text-[0.65rem] font-extrabold tracking-wide uppercase">
-          SPECIAL
+          CUSTOMER
         </p>
       </div>
     </div>

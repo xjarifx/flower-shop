@@ -2,19 +2,19 @@ import { Link } from "react-router-dom";
 import OptimizedImage from "./OptimizedImage";
 
 const featureImages = [
-  { src: "/assets/6.jpg", alt: "Pink stems" },
-  { src: "/assets/27.jpg", alt: "Red bloom" },
-  { src: "/assets/8.jpg", alt: "White petal" },
+  { src: "/assets/1.webp", alt: "Pink stems" },
+  { src: "/assets/2.webp", alt: "Red bloom" },
+  { src: "/assets/3.webp", alt: "White petal" },
 ];
 
 const introParagraphs = [
-  "Lily's journey with flowers began in the heart of Oregon, amid the flourishing fields of her aunts' flower farm. It was there, surrounded by the abundance of nature, that she discovered her passion for floral design. From learning the names of each bloom to understanding the delicate balance of a bouquet, she absorbed the artistry of flowers like rich Oregon soil.",
-  "Our Blooms is the expression of that lifelong passion: a place where her love for flowers translates into beautifully curated arrangements that bring joy and elegance to your spaces.",
+  "Growing up on her family's flower farm in Oregon, Lily learned everything about growing, cutting, and arranging fresh flowers. After moving to Miami, she saw an opportunity to bring farm-fresh blooms to the city—flowers that go from field to vase in days, not weeks.",
+  "Today, Our Blooms is Miami's go-to flower shop for fresh, affordable arrangements. We work directly with local and regional growers to bring you the freshest flowers at the best prices, delivered right to your door.",
 ];
 
 const closingParagraphs = [
-  "From humble beginnings, Our Blooms has grown into a beloved local destination, known for its artful arrangements, personal service, and commitment to quality.",
-  "Discover how we can add a touch of natural beauty to your next event.",
+  "What started as a small shop in downtown Miami has grown into a thriving business with thousands of happy customers. We're known for our fresh flowers, fast delivery, and friendly service.",
+  "Whether you need a bouquet for a birthday, anniversary, or just to brighten someone's day, we're here to help. Order online or visit our shop.",
 ];
 
 export default function AboutPage() {
@@ -34,7 +34,7 @@ export default function AboutPage() {
             <div className="grid gap-5 md:grid-cols-[minmax(0,17rem)_1fr] md:items-start">
               <div className="overflow-hidden rounded-2xl">
                 <OptimizedImage
-                  src="/assets/owner.jpg"
+                  src="/assets/owner.webp"
                   alt="Founder portrait"
                   loading="lazy"
                   decoding="async"
@@ -52,8 +52,7 @@ export default function AboutPage() {
               </div>
             </div>
             <h2 className="mt-7 text-3xl leading-tight font-extrabold text-zinc-900 sm:text-4xl">
-              Our Blooms was founded in honor of Lily Smith's loving aunts,
-              Teresa and Beth.
+              Our Blooms started in 2018 when Lily Smith brought her family's flower farming tradition to Miami.
             </h2>
             <div className="mt-8 grid grid-cols-3 gap-4">
               {featureImages.map((image) => (
@@ -76,7 +75,7 @@ export default function AboutPage() {
 
             <div className="mt-8 overflow-hidden rounded-2xl">
               <OptimizedImage
-                src="/assets/28.jpg"
+                src="/assets/24.webp"
                 alt="Pink tulips"
                 loading="lazy"
                 decoding="async"
@@ -91,11 +90,11 @@ export default function AboutPage() {
             </div>
 
             <Link
-              to="/coming-soon"
+              to="/gallery"
               className="mt-7 inline-flex items-center gap-2 rounded-sm bg-amber-300 px-3 py-1.5 text-[0.62rem] font-extrabold tracking-wide text-zinc-900 uppercase transition-opacity hover:opacity-85"
             >
               <span aria-hidden="true">•</span>
-              <span>BOOK A CONSULTATION TODAY</span>
+              <span>ORDER FLOWERS TODAY</span>
             </Link>
           </div>
         </div>

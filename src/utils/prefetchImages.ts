@@ -6,8 +6,8 @@ import {
   sliderImages,
 } from "../data/siteData";
 
-const EXTRA_ROUTE_IMAGES = ["/assets/owner.jpg"];
-const LOCAL_ASSET_PATTERN = /^\/assets\/.+\.(jpe?g|png)(\?.*)?$/i;
+const EXTRA_ROUTE_IMAGES = ["/assets/owner.webp"];
+const LOCAL_ASSET_PATTERN = /^\/assets\/.+\.(jpe?g|png|webp)(\?.*)?$/i;
 
 type RoutePath = "/" | "/gallery" | "/about" | "/contract";
 
@@ -46,27 +46,27 @@ function getRouteImageMap(useWebp: boolean) {
     "/": [
       heroSection.image_path,
       ...sliderImages.map((image) => image.image_path),
-      "/assets/17.jpg",
-      "/assets/22.jpg",
-      "/assets/26.jpg",
-      "/assets/27.jpg",
+      "/assets/10.webp",
+      "/assets/16.webp",
+      "/assets/23.webp",
+      "/assets/7.webp",
       ...shared,
     ],
     "/gallery": [
       ...galleryItems.map((item) => item.image_path),
       ...services.map((service) => service.image_path),
-      "/assets/27.jpg",
+      "/assets/7.webp",
       ...shared,
     ],
     "/about": [
-      "/assets/6.jpg",
-      "/assets/27.jpg",
-      "/assets/8.jpg",
-      "/assets/28.jpg",
+      "/assets/1.webp",
+      "/assets/2.webp",
+      "/assets/3.webp",
+      "/assets/24.webp",
       ...EXTRA_ROUTE_IMAGES,
       ...shared,
     ],
-    "/contract": ["/assets/6.jpg", ...shared],
+    "/contract": ["/assets/5.webp", ...shared],
   };
 
   return Object.entries(routeImageSources).reduce(

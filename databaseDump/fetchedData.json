@@ -9,9 +9,9 @@
     "hero_sections": [
       {
         "id": 1,
-        "title": "Our Blooms",
-        "image_path": "/assets/hero.jpg",
-        "image_alt": "Featured flower arrangement"
+        "title": "Fresh Blooms Delivered Daily",
+        "image_path": "/assets/hero.webp",
+        "image_alt": "Beautiful fresh flower bouquet arrangement"
       }
     ],
     "gallery_items": [
@@ -19,111 +19,111 @@
         "id": 1,
         "name": "DAWN BLOOM",
         "price": "$55/Bunch",
-        "image_path": "/assets/6.jpg"
+        "image_path": "/assets/6.webp"
       },
       {
         "id": 2,
         "name": "SOLSTICE STEMS",
         "price": "$30/Bunch",
-        "image_path": "/assets/8.jpg"
+        "image_path": "/assets/8.webp"
       },
       {
         "id": 3,
         "name": "WHISPER GREENS",
         "price": "$120/Bunch",
-        "image_path": "/assets/9.jpg"
+        "image_path": "/assets/9.webp"
       },
       {
         "id": 4,
         "name": "CLARITY PETALS",
         "price": "$55/Bunch",
-        "image_path": "/assets/11.jpg"
+        "image_path": "/assets/11.webp"
       },
       {
         "id": 5,
         "name": "RIVER STONE",
         "price": "$30/Bunch",
-        "image_path": "/assets/12.jpg"
+        "image_path": "/assets/12.webp"
       },
       {
         "id": 6,
         "name": "MOONLIT MEADOW",
         "price": "$120/Bunch",
-        "image_path": "/assets/13.jpg"
+        "image_path": "/assets/13.webp"
       },
       {
         "id": 7,
         "name": "EMBER LEAF",
         "price": "$55/Bunch",
-        "image_path": "/assets/14.jpg"
+        "image_path": "/assets/14.webp"
       },
       {
         "id": 8,
         "name": "SKYLINE BLOOM",
         "price": "$75/Bunch",
-        "image_path": "/assets/15.jpg"
+        "image_path": "/assets/15.webp"
       },
       {
         "id": 9,
         "name": "STILL WATERS",
         "price": "$250/Bunch",
-        "image_path": "/assets/17.jpg"
+        "image_path": "/assets/17.webp"
       }
     ],
     "services": [
       {
         "id": 1,
-        "title": "FLORAL INSTALLATIONS",
-        "description": "We create clean, contemporary designs that elevate any environment, from intimate gatherings to grand events.",
-        "image_path": "/assets/18.jpg"
+        "title": "SAME-DAY DELIVERY",
+        "description": "Order before 2 PM and get your fresh flowers delivered the same day. Perfect for last-minute gifts or spontaneous celebrations.",
+        "image_path": "/assets/18.webp"
       },
       {
         "id": 2,
-        "title": "NATIVE PLANT ARRANGEMENTS",
-        "description": "Our selection of locally sourced flora brings natural resilience and effortless elegance to your home.",
-        "image_path": "/assets/22.jpg"
+        "title": "SUBSCRIPTION BOXES",
+        "description": "Never run out of fresh flowers. Choose weekly or monthly deliveries and enjoy a rotating selection of seasonal blooms at your doorstep.",
+        "image_path": "/assets/22.webp"
       },
       {
         "id": 3,
-        "title": "CUSTOM FLORAL CONCEPTS",
-        "description": "Your vision, our blooms. We build arrangements that are both personal and exquisitely simple.",
-        "image_path": "/assets/26.jpg"
+        "title": "CUSTOM BOUQUETS",
+        "description": "Build your perfect bouquet. Select your favorite flowers, colors, and sizes. Our florists will craft it fresh to order.",
+        "image_path": "/assets/26.webp"
       }
     ],
     "slider_images": [
       {
         "id": 1,
-        "image_path": "/assets/27.jpg",
+        "image_path": "/assets/27.webp",
         "image_alt": "Slider flower 1"
       },
       {
         "id": 2,
-        "image_path": "/assets/28.jpg",
+        "image_path": "/assets/28.webp",
         "image_alt": "Slider flower 2"
       },
       {
         "id": 3,
-        "image_path": "/assets/19.jpg",
+        "image_path": "/assets/19.webp",
         "image_alt": "Slider flower 3"
       },
       {
         "id": 4,
-        "image_path": "/assets/20.jpg",
+        "image_path": "/assets/20.webp",
         "image_alt": "Slider flower 4"
       },
       {
         "id": 5,
-        "image_path": "/assets/21.jpg",
+        "image_path": "/assets/21.webp",
         "image_alt": "Slider flower 5"
       }
     ],
     "footer_sections": [
       {
         "id": 1,
-        "brand": "OB.",
+        "brand": "Our Blooms",
         "location": "Miami, FL",
-        "contact_label": "Contact",
-        "image_path": "/assets/footer.jpg",
+        "contact_label": "Order Now",
+        "image_path": "/assets/footer.webp",
         "image_alt": "Footer flower arrangement"
       }
     ]

@@ -1,15 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 import { prewarmRoute } from "../utils/prefetchImages";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { getCartCount } = useCart();
+  const cartCount = getCartCount();
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/gallery", label: "Gallery" },
+    { href: "/gallery", label: "Shop" },
     { href: "/about", label: "About" },
-    { href: "/contract", label: "Contract" },
+    { href: "/contract", label: "Delivery & FAQ" },
   ];
 
   return (
@@ -23,48 +26,74 @@ export default function Navbar() {
             Our Blooms
           </Link>
 
-          <button
-            type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-zinc-900 md:hidden"
-            aria-label="Toggle navigation menu"
-            aria-expanded={isMenuOpen}
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="h-6 w-6"
+          <div className="flex items-center gap-4">
+            <Link
+              to="/cart"
+              className="relative mr-5 inline-flex items-center justify-center rounded-md p-2 text-zinc-900 transition-opacity hover:opacity-70"
+              aria-label="Shopping cart"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d={
-                  isMenuOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                }
-              />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="h-6 w-6"
+              >
+                <circle cx="9" cy="21" r="1" />
+                <circle cx="20" cy="21" r="1" />
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+              </svg>
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-amber-300 text-xs font-bold text-zinc-900">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
 
-          <ul className="hidden items-center gap-10 text-sm font-semibold tracking-wide text-zinc-900 uppercase md:flex">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  to={link.href}
-                  className="transition-opacity hover:opacity-70"
-                  onMouseEnter={() => prewarmRoute(link.href)}
-                  onFocus={() => prewarmRoute(link.href)}
-                  onTouchStart={() => prewarmRoute(link.href)}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-md p-2 text-zinc-900 md:hidden"
+              aria-label="Toggle navigation menu"
+              aria-expanded={isMenuOpen}
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d={
+                    isMenuOpen
+                      ? "M6 18L18 6M6 6l12 12"
+                      : "M4 6h16M4 12h16M4 18h16"
+                  }
+                />
+              </svg>
+            </button>
+
+            <ul className="hidden items-center gap-10 text-sm font-semibold tracking-wide text-zinc-900 uppercase md:flex">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className="transition-opacity hover:opacity-70"
+                    onMouseEnter={() => prewarmRoute(link.href)}
+                    onFocus={() => prewarmRoute(link.href)}
+                    onTouchStart={() => prewarmRoute(link.href)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {isMenuOpen && (

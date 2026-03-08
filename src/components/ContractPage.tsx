@@ -1,34 +1,34 @@
 import { Link } from "react-router-dom";
 import OptimizedImage from "./OptimizedImage";
 
-const keyTerms = [
-  "A signed agreement and 30% retainer confirms your date.",
-  "Final invoice is due 5 days before delivery or installation.",
-  "Color palette and floral direction are approved after consultation.",
-  "Reschedules are based on calendar availability.",
-  "Within-10-day cancellations are non-refundable.",
+const deliveryInfo = [
+  "Same-day delivery available for orders placed before 2 PM.",
+  "Free delivery on orders over $75 in Miami-Dade County.",
+  "We deliver 7 days a week, including holidays.",
+  "Delivery time slots: Morning (9 AM-12 PM) or Afternoon (1 PM-5 PM).",
+  "Contact us for rush deliveries or specific time requests.",
 ];
 
-const processSteps = [
+const faqItems = [
   {
-    title: "Consultation",
-    details: "We discuss style, scale, seasonality, and budget.",
+    title: "How fresh are your flowers?",
+    details: "All flowers are cut fresh and delivered within 2-3 days of harvest. We work with local growers whenever possible.",
   },
   {
-    title: "Proposal + Contract",
-    details: "You receive mood direction, pricing, and service terms.",
+    title: "Can I customize my bouquet?",
+    details: "Absolutely! Choose your flowers, colors, and size. Our florists will create it fresh to order.",
   },
   {
-    title: "Booking",
-    details: "Sign digitally and submit the retainer to reserve your date.",
+    title: "What's your return policy?",
+    details: "We guarantee freshness for 7 days. If you're not satisfied, contact us within 24 hours for a replacement or refund.",
   },
   {
-    title: "Floral Production",
-    details: "Our studio sources and prepares your arrangements.",
+    title: "Do you do weddings or events?",
+    details: "Yes! Contact us for custom quotes on weddings, corporate events, and large orders.",
   },
   {
-    title: "Delivery + Setup",
-    details: "Final styling is completed on-site at your venue or space.",
+    title: "How do I care for my flowers?",
+    details: "Trim stems at an angle, change water daily, and keep away from direct sunlight and heat sources.",
   },
 ];
 
@@ -38,15 +38,13 @@ export default function ContractPage() {
       <div className="mx-auto max-w-400">
         <div className="rounded-3xl border border-zinc-300 bg-white/60 p-6 sm:p-8">
           <p className="text-xs font-semibold tracking-wide text-zinc-600 uppercase">
-            Floral Service Agreement
+            Customer Information
           </p>
           <h1 className="mt-2 text-4xl leading-tight font-extrabold text-zinc-900 uppercase sm:text-5xl">
-            CONTRACT
+            DELIVERY & FAQ
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-6 text-zinc-800 sm:text-base">
-            Every event deserves clarity from day one. This page outlines our
-            standard terms, planning flow, and booking expectations so you can
-            move forward with confidence.
+            Everything you need to know about ordering, delivery, and caring for your fresh flowers.
           </p>
         </div>
 
@@ -54,8 +52,8 @@ export default function ContractPage() {
           <div className="space-y-7">
             <div className="overflow-hidden rounded-3xl">
               <OptimizedImage
-                src="/assets/6.jpg"
-                alt="Floral contract planning"
+                src="/assets/5.webp"
+                alt="Fresh flower delivery"
                 loading="lazy"
                 decoding="async"
                 className="h-96 w-full object-cover sm:h-128"
@@ -64,10 +62,10 @@ export default function ContractPage() {
 
             <div className="rounded-3xl border border-zinc-300 bg-white/70 p-6 sm:p-7">
               <h2 className="text-sm font-black tracking-wide text-zinc-900 uppercase">
-                Contract Highlights
+                Delivery Information
               </h2>
               <ul className="mt-4 space-y-3 text-sm leading-6 text-zinc-800">
-                {keyTerms.map((term) => (
+                {deliveryInfo.map((term) => (
                   <li key={term} className="flex items-start gap-2">
                     <span className="pt-1 text-zinc-500">•</span>
                     <span>{term}</span>
@@ -77,17 +75,11 @@ export default function ContractPage() {
 
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link
-                  to="/#work-with-us"
+                  to="/gallery"
                   className="inline-flex items-center gap-2 rounded-sm bg-amber-300 px-3 py-1.5 text-xs font-extrabold tracking-wide text-zinc-900 uppercase transition-opacity hover:opacity-85"
                 >
                   <span aria-hidden="true">•</span>
-                  <span>Request Full Contract</span>
-                </Link>
-                <Link
-                  to="/about"
-                  className="inline-flex items-center rounded-sm border border-zinc-400 px-3 py-1.5 text-xs font-extrabold tracking-wide text-zinc-900 uppercase transition-opacity hover:opacity-75"
-                >
-                  About Our Studio
+                  <span>Shop Flowers</span>
                 </Link>
               </div>
             </div>
@@ -95,28 +87,27 @@ export default function ContractPage() {
 
           <aside className="rounded-3xl border border-zinc-300 bg-white/70 p-6 sm:p-7">
             <h2 className="text-sm font-black tracking-wide text-zinc-900 uppercase">
-              Project Timeline
+              Frequently Asked
             </h2>
             <p className="mt-3 text-sm leading-6 text-zinc-700">
-              Typical contract flow for weddings, brand events, and recurring
-              installations.
+              Common questions about our flowers, delivery, and services.
             </p>
 
             <ol className="mt-5 space-y-4">
-              {processSteps.map((step, index) => (
+              {faqItems.map((item, index) => (
                 <li
-                  key={step.title}
+                  key={item.title}
                   className="grid grid-cols-[1.8rem_1fr] gap-3"
                 >
                   <span className="mt-0.5 inline-flex h-7 w-7 items-center justify-center rounded-full border border-zinc-400 text-xs font-bold text-zinc-800">
                     {index + 1}
                   </span>
                   <div>
-                    <p className="text-sm font-semibold tracking-wide text-zinc-900 uppercase">
-                      {step.title}
+                    <p className="text-sm font-semibold text-zinc-900">
+                      {item.title}
                     </p>
                     <p className="mt-1 text-sm leading-6 text-zinc-700">
-                      {step.details}
+                      {item.details}
                     </p>
                   </div>
                 </li>

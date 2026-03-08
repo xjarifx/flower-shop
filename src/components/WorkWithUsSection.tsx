@@ -7,7 +7,7 @@ export default function WorkWithUsSection() {
       <div className="mx-auto max-w-400">
         <div className="overflow-hidden rounded-3xl">
           <OptimizedImage
-            src="/assets/27.jpg"
+            src="/assets/7.webp"
             alt="Purple flower arrangement"
             loading="lazy"
             decoding="async"
@@ -18,8 +18,8 @@ export default function WorkWithUsSection() {
 
       <About
         id="work-with-us"
-        eyebrow="WORK WITH US"
-        title="Discover how we can add a touch of natural beauty to your next event."
+        eyebrow="SPECIAL OCCASIONS"
+        title="Weddings, events, or just because. We deliver fresh flowers for every moment that matters."
         ctaLabel="ABOUT US"
         ctaHref="/about"
         sectionClassName="bg-zinc-100 px-4 pt-16 pb-0 sm:pt-20"

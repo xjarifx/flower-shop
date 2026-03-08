@@ -1,7 +1,10 @@
 import { galleryItems } from "../data/siteData";
+import { useCart } from "../context/CartContext";
 import OptimizedImage from "./OptimizedImage";
 
 export default function Gallery() {
+  const { addToCart } = useCart();
+
   return (
     <section id="gallery" className="bg-zinc-100 px-4 py-14 sm:py-18">
       <div className="mx-auto max-w-400">
@@ -11,8 +14,8 @@ export default function Gallery() {
 
         <div className="mt-10 grid gap-7 lg:grid-cols-[10rem_1fr] lg:gap-6">
           <div className="text-[0.65rem] leading-4 font-semibold tracking-wide text-zinc-700 uppercase">
-            <p>SEASONAL</p>
-            <p>ARRANGEMENTS</p>
+            <p>SHOP</p>
+            <p>BOUQUETS</p>
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -36,6 +39,13 @@ export default function Gallery() {
                     className="aspect-[4/3] w-full object-cover"
                   />
                 </div>
+
+                <button
+                  onClick={() => addToCart(item)}
+                  className="mt-3 w-full rounded-md bg-amber-300 px-4 py-2.5 text-xs font-extrabold text-zinc-900 uppercase transition-opacity hover:opacity-85"
+                >
+                  Add to Cart
+                </button>
               </article>
             ))}
           </div>
